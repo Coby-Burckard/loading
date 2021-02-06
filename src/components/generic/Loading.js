@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import useInterval from "use-interval"
 import { CSSTransition } from "react-transition-group"
 import heroku from "../images/heroku.svg"
@@ -6,7 +6,7 @@ import heroku from "../images/heroku.svg"
 const Loading = ({ isLoading, setIsLoading }) => {
   useEffect(() => {
     setIsLoading(true)
-  }, [])
+  }, [setIsLoading])
 
   useInterval(
     async () => {
